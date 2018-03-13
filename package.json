@@ -53,7 +53,7 @@
   "name": "validate-cnj",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bipbop/generator-bipbop-js-tdd.git"
+    "url": "git+https://github.com/bipbop/validate-cnj.git"
   },
   "scripts": {
     "prepack": "gulp pack:dist",
