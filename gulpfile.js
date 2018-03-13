@@ -26,6 +26,4 @@ gulp.task('pack:cjs', () => rollup(rollupGenerator()).then(bundle => bundle.writ
 })));
 
 gulp.task('pack:dist', ['pack:test', 'pack:cjs']);
-
-gulp.task('listener', () => gulp.watch('lib/**/*.js', ['pack:test']));
 gulp.task('default', ['pack:test', 'pack:dist']);
