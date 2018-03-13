@@ -61,5 +61,5 @@
     "test": "nyc mocha tests/**/*.spec.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
-  "version": "1.0.6"
+  "version": "1.0.7"
 }
