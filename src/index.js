@@ -1,4 +1,4 @@
-import { compute } from 'iso-7064';
+import iso from 'iso-7064';
 import pad from 'pad';
 import ExtendableError from 'es6-error';
 
@@ -19,9 +19,9 @@ export class Validate {
 
     const [proc, dv, year, justice, number, court] = args;
 
-    const firstStep = compute(proc).toString();
-    const secondStep = compute(firstStep + year + justice + number).toString();
-    const thirdStep = compute(`${secondStep + court}00`).toString();
+    const firstStep = iso.compute(proc).toString();
+    const secondStep = iso.compute(firstStep + year + justice + number).toString();
+    const thirdStep = iso.compute(`${secondStep + court}00`).toString();
 
     const ndv = 98 - (thirdStep % 97);
     this.dv = pad(2, ndv.toString(), '0');

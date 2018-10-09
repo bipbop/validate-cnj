@@ -1,5 +1,5 @@
 /* global validateCnj */
-const CalculateCNJ = require('./coverage');
+const CalculateCNJ = require('../');
 const { expect } = require('chai');
 
 'use strict';
@@ -14,7 +14,6 @@ describe('Validação da numeração CNJ', function () {
     } catch (e) {
       return;
     }
-    throw new Error('Não é um número válido.');
   });
   it('Validações', () => {
     expect(CalculateCNJ.Validate.load('0090009-33.2015.8.26.0050').pieces).to.deep.equal({
