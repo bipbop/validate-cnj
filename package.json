@@ -18,7 +18,6 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-airbnb-es5": "^1.2.0",
     "eslint-plugin-import": "^2.9.0",
-    "gulp": "^3.9.1",
     "iso-7064": "^1.0.0",
     "mocha": "^5.0.1",
     "pad": "^2.0.3",
@@ -46,8 +45,7 @@
     "url": "git+https://github.com/bipbop/validate-cnj.git"
   },
   "scripts": {
-    "prepack": "gulp pack:dist",
-    "pretest": "gulp pack:test",
+    "prepack": "rollup -c",
     "test": "mocha tests/**/*.spec.js"
   },
   "version": "1.0.8"
