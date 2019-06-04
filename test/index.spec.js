@@ -1,5 +1,5 @@
 /* global validateCnj */
-const CalculateCNJ = require('../');
+const CalculateCNJ = require('..');
 const { expect } = require('chai');
 
 'use strict';

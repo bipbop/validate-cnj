@@ -15,9 +15,6 @@ This package is provided in these module formats:
 
 - CommonJS
 
-
-
-
 ## Dependencies
 
 - [es6-error](https://github.com/bjyoungblood/es6-error): Easily-extendable error for use with ES6 classes
