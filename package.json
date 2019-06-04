@@ -20,6 +20,7 @@
     "iso-7064": "^1.0.1",
     "mocha": "^6.1.4",
     "pad": "^3.2.0",
+    "rimraf": "^2.6.3",
     "rollup": "^1.13.1",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "10.0.0",
@@ -46,7 +47,8 @@
     "url": "git+https://github.com/bipbop/validate-cnj.git"
   },
   "scripts": {
-    "clear": "rimraf index.js",
+    "clean": "rimraf index.js",
+    "prebuild": "npm run clean",
     "build": "rollup -c",
     "prepack": "npm run build",
     "test": "mocha test/**/*.spec.js"
