@@ -37,7 +37,7 @@
     "lawtech"
   ],
   "private": false,
-  "license": "GPL-2.0",
+  "license": "MIT",
   "main": "index.js",
   "browser": "index.js",
   "name": "validate-cnj",
