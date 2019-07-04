@@ -35,7 +35,7 @@ export class Validate {
                 number: StringOrNumber,
                 court: StringOrNumber);
 
-    public generate(mask: boolean): string;
+    public generate(mask?: boolean): string;
 }
 
 export class Exception extends Error {}

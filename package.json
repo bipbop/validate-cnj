@@ -13,20 +13,20 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "es6-error": "^4.1.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-airbnb-es5": "^1.2.0",
-    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-import": "^2.18.0",
     "iso-7064": "^1.0.1",
     "mocha": "^6.1.4",
     "pad": "^3.2.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.13.1",
-    "rollup-plugin-buble": "^0.19.6",
-    "rollup-plugin-commonjs": "10.0.0",
-    "rollup-plugin-filesize": "^6.1.0",
-    "rollup-plugin-license": "0.8.1",
-    "rollup-plugin-node-resolve": "^5.0.1",
+    "rollup": "^1.16.4",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "10.0.1",
+    "rollup-plugin-filesize": "^6.1.1",
+    "rollup-plugin-license": "0.9.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.2"
   },
   "keywords": [
@@ -53,5 +53,5 @@
     "prepack": "npm run build",
     "test": "mocha test/**/*.spec.js"
   },
-  "version": "1.0.9"
+  "version": "1.0.11"
 }
