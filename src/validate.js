@@ -27,7 +27,7 @@ export default class ValidateCNJ {
     this.dv = pad(2, ndv.toString(), '0');
 
     if (dv !== null && dv !== this.dv) {
-      throw new Exception('Could not validate the CNJ number, invalid checker digit');
+      throw new Exception(`Checksum not correct - CNJ number is invalid. Expected is ${this.dv}, received ${dv}.`);
     }
 
     this.proc = proc;
@@ -49,6 +49,14 @@ export default class ValidateCNJ {
       number: this.number,
       court: this.court,
     };
+  }
+
+  static format(cnj) {
+    try {
+      return new ValidateCNJ(cnj).generate();
+    } catch (cnj) {
+      return cnj;
+    }
   }
 
   static load(cnj) {

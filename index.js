@@ -534,7 +534,7 @@
     this.dv = _pad$1(2, ndv.toString(), '0');
 
     if (dv !== null && dv !== this.dv) {
-      throw new ValidateCNJException('Could not validate the CNJ number, invalid checker digit');
+      throw new ValidateCNJException(("Checksum not correct - CNJ number is invalid. Expected is " + (this.dv) + ", received " + dv + "."));
     }
 
     this.proc = proc;
@@ -562,6 +562,14 @@
       number: this.number,
       court: this.court,
     };
+  };
+
+  ValidateCNJ.format = function format (cnj) {
+    try {
+      return new ValidateCNJ(cnj).generate();
+    } catch (cnj) {
+      return cnj;
+    }
   };
 
   ValidateCNJ.load = function load (cnj) {
