@@ -506,7 +506,7 @@
   var SIZES = [7, 2, 4, 1, 2, 4];
   var NOT_NUMBERS = /[^0-9]/g;
 
-  var ValidateCNJ = function ValidateCNJ() {
+  var Validate = function Validate() {
     var parameters = [], len = arguments.length;
     while ( len-- ) parameters[ len ] = arguments[ len ];
 
@@ -546,7 +546,7 @@
 
   var prototypeAccessors = { pieces: { configurable: true } };
 
-  ValidateCNJ.factory = function factory (proc, ref, year) {
+  Validate.factory = function factory (proc, ref, year) {
       var justice = ref.justice;
       var number = ref.number;
       var court = ref.court;
@@ -564,7 +564,7 @@
     };
   };
 
-  ValidateCNJ.format = function format (cnj) {
+  Validate.format = function format (cnj) {
     try {
       return new ValidateCNJ(cnj).generate();
     } catch (cnj) {
@@ -572,7 +572,7 @@
     }
   };
 
-  ValidateCNJ.load = function load (cnj) {
+  Validate.load = function load (cnj) {
     var numcnj = cnj.replace(NOT_NUMBERS, '');
     var pos = 0;
     return new (Function.prototype.bind.apply( ValidateCNJ, [ null ].concat( SIZES.map(function (i) {
@@ -582,7 +582,7 @@
     })) ));
   };
 
-  ValidateCNJ.prototype.generate = function generate (mask) {
+  Validate.prototype.generate = function generate (mask) {
       if ( mask === void 0 ) mask = true;
 
     return !mask
@@ -590,10 +590,10 @@
       : [this.proc, [this.dv, this.year, this.justice, this.number, this.court].join('.')].join('-');
   };
 
-  Object.defineProperties( ValidateCNJ.prototype, prototypeAccessors );
+  Object.defineProperties( Validate.prototype, prototypeAccessors );
 
   exports.Exception = ValidateCNJException;
-  exports.Validate = ValidateCNJ;
+  exports.Validate = Validate;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
