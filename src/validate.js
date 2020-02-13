@@ -6,7 +6,7 @@ import Exception from './exception';
 const SIZES = [7, 2, 4, 1, 2, 4];
 const NOT_NUMBERS = /[^0-9]/g;
 
-export default class ValidateCNJ {
+export default class Validate {
   constructor(...parameters) {
     const args = parameters.map((v, i) => {
       let r = v;
