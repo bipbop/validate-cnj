@@ -38,7 +38,7 @@ export default class Validate {
   }
 
   static factory(proc, { justice, number, court }, year) {
-    return new ValidateCNJ(proc, null, year, justice, number, court);
+    return new Validate(proc, null, year, justice, number, court);
   }
 
   get pieces() {
@@ -53,7 +53,7 @@ export default class Validate {
 
   static format(cnj) {
     try {
-      return new ValidateCNJ(cnj).generate();
+      return new Validate(cnj).generate();
     } catch (cnj) {
       return cnj;
     }
@@ -62,7 +62,7 @@ export default class Validate {
   static load(cnj) {
     const numcnj = cnj.replace(NOT_NUMBERS, '');
     let pos = 0;
-    return new ValidateCNJ(...SIZES.map((i) => {
+    return new Validate(...SIZES.map((i) => {
       const substr = numcnj.substr(pos, i);
       pos += i;
       return substr;

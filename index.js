@@ -551,7 +551,7 @@
       var number = ref.number;
       var court = ref.court;
 
-    return new ValidateCNJ(proc, null, year, justice, number, court);
+    return new Validate(proc, null, year, justice, number, court);
   };
 
   prototypeAccessors.pieces.get = function () {
@@ -566,7 +566,7 @@
 
   Validate.format = function format (cnj) {
     try {
-      return new ValidateCNJ(cnj).generate();
+      return new Validate(cnj).generate();
     } catch (cnj) {
       return cnj;
     }
@@ -575,7 +575,7 @@
   Validate.load = function load (cnj) {
     var numcnj = cnj.replace(NOT_NUMBERS, '');
     var pos = 0;
-    return new (Function.prototype.bind.apply( ValidateCNJ, [ null ].concat( SIZES.map(function (i) {
+    return new (Function.prototype.bind.apply( Validate, [ null ].concat( SIZES.map(function (i) {
       var substr = numcnj.substr(pos, i);
       pos += i;
       return substr;

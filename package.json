@@ -50,5 +50,5 @@
     "prepack": "npm run build",
     "test": "mocha test/**/*.spec.js"
   },
-  "version": "1.0.13"
+  "version": "1.0.14"
 }
