@@ -1,7 +1,7 @@
 const path = require('path');
-const buble = require('rollup-plugin-buble');
-const commonjs = require('rollup-plugin-commonjs');
-const resolve = require('rollup-plugin-node-resolve');
+const buble = require('@rollup/plugin-buble');
+const commonjs = require('@rollup/plugin-commonjs');
+const resolve = require('@rollup/plugin-node-resolve');
 
 const pkgDetails = require('./package.json');
 

@@ -1,7 +1,592 @@
-/**
- * Bundle of validate-cnj
- * Generated: 2020-02-13
- * Version: 1.0.12
- */
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = global || self, factory(global.JuristekParser = {}));
+}(this, (function (exports) { 'use strict';
 
-!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e((t=t||self).JuristekParser={})}(this,function(t){"use strict";function r(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}var e;function n(){e.apply(this,arguments)}function o(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"";!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,o);var e=r(this,(o.__proto__||Object.getPrototypeOf(o)).call(this,t));return Object.defineProperty(e,"message",{configurable:!0,enumerable:!1,value:t,writable:!0}),Object.defineProperty(e,"name",{configurable:!0,enumerable:!1,value:e.constructor.name,writable:!0}),Error.hasOwnProperty("captureStackTrace")?(Error.captureStackTrace(e,e.constructor),r(e)):(Object.defineProperty(e,"stack",{configurable:!0,enumerable:!1,value:new Error(t).stack,writable:!0}),e)}var l=function(t){function e(){t.apply(this,arguments)}return t&&(e.__proto__=t),(e.prototype=Object.create(t&&t.prototype)).constructor=e}((function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(o,(e=Error,n.prototype=Object.create(e.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),Object.setPrototypeOf?Object.setPrototypeOf(n,e):n.__proto__=e,n)),o)),i="A".charCodeAt(0),u="0".charCodeAt(0),c=/^[0-9A-Z]{1,}$/;function a(t){for(var e,r=0,n=0;n<t.length;++n)1e6<(r=(e=t.charCodeAt(n))+(i<=e?100*r-i+10:10*r-u))&&(r%=97);return r%97}var h={compute:function(t){var e=function(t){if(null==t)throw new Error("Expecting 'rawValue' of type 'string', found: '"+t+"'");if("string"!=typeof t)throw new Error("Expecting 'rawValue' of type 'string', found: '"+typeof t+"'");return t}(t);if(!e.match(c))throw new Error("Invalid data format; expecting: '"+c+"', found: '"+e+"'");return a(e)},computeWithoutCheck:function(t){return a(t)}};function b(t){return(b="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function f(e){var r,n;return n=g,r=(r=e||{})||{},Object.keys(n).forEach(function(t){void 0===r[t]&&(r[t]=y(n[t]))}),e=r,function(t){return function(t,e){if("string"!=typeof t)return v(t,e);for(var r=0,n=0;n<t.length;n++){var o=v(t.charCodeAt(n),e);if(o<0)return-1;r+=o}return r}(t,e)}}var p,s,y=(function(t){var e=(h.clonePrototype=function(t){if(null===t)return null;function e(){}return e.prototype=t,new e},h.__objToStr=r,h.__isDate=function(t){return"object"===b(t)&&"[object Date]"===r(t)},h.__isArray=function(t){return"object"===b(t)&&"[object Array]"===r(t)},h.__isRegExp=function(t){return"object"===b(t)&&"[object RegExp]"===r(t)},h.__getRegExpFlags=y,h);function h(t,a,e,f){"object"===b(a)&&(e=a.depth,f=a.prototype,a.filter,a=a.circular);var p=[],s=[],l="undefined"!=typeof Buffer;return void 0===a&&(a=!0),void 0===e&&(e=1/0),function t(e,r){if(null===e)return null;if(0==r)return e;var n,o;if("object"!=b(e))return e;if(h.__isArray(e))n=[];else if(h.__isRegExp(e))n=new RegExp(e.source,y(e)),e.lastIndex&&(n.lastIndex=e.lastIndex);else if(h.__isDate(e))n=new Date(e.getTime());else{if(l&&Buffer.isBuffer(e))return n=Buffer.allocUnsafe?Buffer.allocUnsafe(e.length):new Buffer(e.length),e.copy(n),n;void 0===f?(o=Object.getPrototypeOf(e),n=Object.create(o)):(n=Object.create(f),o=f)}if(a){var i=p.indexOf(e);if(-1!=i)return s[i];p.push(e),s.push(n)}for(var u in e){var c;o&&(c=Object.getOwnPropertyDescriptor(o,u)),c&&null==c.set||(n[u]=t(e[u],r-1))}return n}(t,e)}function r(t){return Object.prototype.toString.call(t)}function y(t){var e="";return t.global&&(e+="g"),t.ignoreCase&&(e+="i"),t.multiline&&(e+="m"),e}t.exports&&(t.exports=e)}(p={exports:{}},p.exports),p.exports),d=[[768,879],[1155,1158],[1160,1161],[1425,1469],[1471,1471],[1473,1474],[1476,1477],[1479,1479],[1536,1539],[1552,1557],[1611,1630],[1648,1648],[1750,1764],[1767,1768],[1770,1773],[1807,1807],[1809,1809],[1840,1866],[1958,1968],[2027,2035],[2305,2306],[2364,2364],[2369,2376],[2381,2381],[2385,2388],[2402,2403],[2433,2433],[2492,2492],[2497,2500],[2509,2509],[2530,2531],[2561,2562],[2620,2620],[2625,2626],[2631,2632],[2635,2637],[2672,2673],[2689,2690],[2748,2748],[2753,2757],[2759,2760],[2765,2765],[2786,2787],[2817,2817],[2876,2876],[2879,2879],[2881,2883],[2893,2893],[2902,2902],[2946,2946],[3008,3008],[3021,3021],[3134,3136],[3142,3144],[3146,3149],[3157,3158],[3260,3260],[3263,3263],[3270,3270],[3276,3277],[3298,3299],[3393,3395],[3405,3405],[3530,3530],[3538,3540],[3542,3542],[3633,3633],[3636,3642],[3655,3662],[3761,3761],[3764,3769],[3771,3772],[3784,3789],[3864,3865],[3893,3893],[3895,3895],[3897,3897],[3953,3966],[3968,3972],[3974,3975],[3984,3991],[3993,4028],[4038,4038],[4141,4144],[4146,4146],[4150,4151],[4153,4153],[4184,4185],[4448,4607],[4959,4959],[5906,5908],[5938,5940],[5970,5971],[6002,6003],[6068,6069],[6071,6077],[6086,6086],[6089,6099],[6109,6109],[6155,6157],[6313,6313],[6432,6434],[6439,6440],[6450,6450],[6457,6459],[6679,6680],[6912,6915],[6964,6964],[6966,6970],[6972,6972],[6978,6978],[7019,7027],[7616,7626],[7678,7679],[8203,8207],[8234,8238],[8288,8291],[8298,8303],[8400,8431],[12330,12335],[12441,12442],[43014,43014],[43019,43019],[43045,43046],[64286,64286],[65024,65039],[65056,65059],[65279,65279],[65529,65531],[68097,68099],[68101,68102],[68108,68111],[68152,68154],[68159,68159],[119143,119145],[119155,119170],[119173,119179],[119210,119213],[119362,119364],[917505,917505],[917536,917631],[917760,917999]],g={nul:0,control:0};function v(t,e){return 0===t?e.nul:t<32||127<=t&&t<160?e.control:function(t){var e,r=0,n=d.length-1;if(t<d[0][0]||t>d[n][1])return;for(;r<=n;)if(e=Math.floor((r+n)/2),t>d[e][1])r=e+1;else{if(!(t<d[e][0]))return 1;n=e-1}return}(t)?0:1+(4352<=t&&(t<=4447||9001==t||9002==t||11904<=t&&t<=42191&&12351!=t||44032<=t&&t<=55203||63744<=t&&t<=64255||65040<=t&&t<=65049||65072<=t&&t<=65135||65280<=t&&t<=65376||65504<=t&&t<=65510||131072<=t&&t<=196605||196608<=t&&t<=262141))}function m(){for(var t=[],e=arguments.length;e--;)t[e]=arguments[e];var r=t.map(function(t,e){var r=t;if("number"==typeof r&&(r=r.toString()),null===r&&1===e)return r;if("string"!=typeof r)throw new l("Could not validate the CNJ number, wrong parameter type");if(!j[e])throw new l("Could not validate the CNJ number, wrong parameters size");return w(j[e],r,"0")}),n=r[0],o=r[1],i=r[2],u=r[3],c=r[4],a=r[5],f=h.compute(n).toString(),p=h.compute(f+i+u+c).toString(),s=98-h.compute(p+a+"00").toString()%97;if(this.dv=w(2,s.toString(),"0"),null!==o&&o!==this.dv)throw new l("Could not validate the CNJ number, invalid checker digit");this.proc=n,this.year=i,this.justice=u,this.number=c,this.court=a}var w=s=function(t,e,r){var n,o,i,u;if(null==r&&(r={}),o="number"==typeof t){var c=[t,e];e=c[0],t=c[1]}return"string"==typeof r&&(r={char:r}),null==r.char&&(r.char=" "),null==r.strip&&(r.strip=!1),"string"!=typeof t&&(t=t.toString()),u=null,s="",r.colors&&(n=/\x1B\[(?:[0-9]{1,2}(?:;[0-9]{1,2})?)?[m|K]/g,u=t.replace(n,"")),(i=r.fixed_width?e-(u||t).length:e-f(r.wcwidth_options)(u||t))<0?r.strip?o?t.substr(-1*e):t.substr(0,e):t:(s+=r.char.repeat(i),o?s+t:t+s)},j=[7,2,4,1,2,4],_=/[^0-9]/g,O={pieces:{configurable:!0}};m.factory=function(t,e,r){var n=e.justice,o=e.number,i=e.court;return new m(t,null,r,n,o,i)},O.pieces.get=function(){return{proc:this.proc,year:this.year,justice:this.justice,number:this.number,court:this.court}},m.load=function(t){var r=t.replace(_,""),n=0;return new(Function.prototype.bind.apply(m,[null].concat(j.map(function(t){var e=r.substr(n,t);return n+=t,e}))))},m.prototype.generate=function(t){return void 0===t&&(t=!0),t?[this.proc,[this.dv,this.year,this.justice,this.number,this.court].join(".")].join("-"):this.proc+this.dv+this.year+this.justice+this.number+this.court},Object.defineProperties(m.prototype,O),t.Exception=l,t.Validate=m,Object.defineProperty(t,"__esModule",{value:!0})});
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) { Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } }
+
+  function _extendableBuiltin(cls) {
+    function ExtendableBuiltin() {
+      cls.apply(this, arguments);
+    }
+
+    ExtendableBuiltin.prototype = Object.create(cls.prototype, {
+      constructor: {
+        value: cls,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(ExtendableBuiltin, cls);
+    } else {
+      ExtendableBuiltin.__proto__ = cls;
+    }
+
+    return ExtendableBuiltin;
+  }
+
+  var ExtendableError = function (_extendableBuiltin2) {
+    _inherits(ExtendableError, _extendableBuiltin2);
+
+    function ExtendableError() {
+      var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      _classCallCheck(this, ExtendableError);
+
+      // extending Error is weird and does not propagate `message`
+      var _this = _possibleConstructorReturn(this, (ExtendableError.__proto__ || Object.getPrototypeOf(ExtendableError)).call(this, message));
+
+      Object.defineProperty(_this, 'message', {
+        configurable: true,
+        enumerable: false,
+        value: message,
+        writable: true
+      });
+
+      Object.defineProperty(_this, 'name', {
+        configurable: true,
+        enumerable: false,
+        value: _this.constructor.name,
+        writable: true
+      });
+
+      if (Error.hasOwnProperty('captureStackTrace')) {
+        Error.captureStackTrace(_this, _this.constructor);
+        return _possibleConstructorReturn(_this);
+      }
+
+      Object.defineProperty(_this, 'stack', {
+        configurable: true,
+        enumerable: false,
+        value: new Error(message).stack,
+        writable: true
+      });
+      return _this;
+    }
+
+    return ExtendableError;
+  }(_extendableBuiltin(Error));
+
+  var ValidateCNJException = /*@__PURE__*/(function (ExtendableError) {
+  	function ValidateCNJException () {
+  		ExtendableError.apply(this, arguments);
+  	}if ( ExtendableError ) ValidateCNJException.__proto__ = ExtendableError;
+  	ValidateCNJException.prototype = Object.create( ExtendableError && ExtendableError.prototype );
+  	ValidateCNJException.prototype.constructor = ValidateCNJException;
+
+  	
+
+  	return ValidateCNJException;
+  }(ExtendableError));
+
+  var CHARCODE_A = 'A'.charCodeAt(0);
+  var CHARCODE_0 = '0'.charCodeAt(0);
+
+  var FORMAT = /^[0-9A-Z]{1,}$/;
+
+  function mod97(value) {
+      var buffer = 0;
+      var charCode;
+
+      for (var i = 0; i < value.length; ++i) {
+          charCode = value.charCodeAt(i);
+
+          buffer = charCode + (charCode >= CHARCODE_A ? buffer * 100 - CHARCODE_A + 10 : buffer * 10 - CHARCODE_0);
+
+          if (buffer > 1000000) {
+              buffer %= 97;
+          }
+      }
+
+      return buffer % 97;
+  }
+
+  function stringifyInput(rawValue) {
+      if (rawValue === null || rawValue === undefined) {
+          throw new Error('Expecting \'rawValue\' of type \'string\', found: \'' + rawValue + '\'');
+      }
+
+      if (typeof rawValue !== 'string') {
+          throw new Error('Expecting \'rawValue\' of type \'string\', found: \'' + (typeof rawValue) + '\'');
+      }
+
+      return rawValue;
+  }
+
+  var iso7064 = {
+      /**
+       * Check requirements.
+       * Returns result of modulo 97 applied to the String input rawValue.
+       *
+       * Requirements:
+       * - rawValue must be not `Null`
+       * - rawValue must be of type `String`
+       * - rawValue must respect format `^[0-9A-Z]{1,}$`
+       *
+       * @param {*} rawValue
+       */
+      compute: function (rawValue) {
+          var value = stringifyInput(rawValue);
+
+          if (!value.match(FORMAT)) {
+              throw new Error('Invalid data format; expecting: \'' + FORMAT + '\', found: \'' + value + '\'');
+          }
+
+          return mod97(value);
+      },
+
+      /**
+       * Does NOT check requirements.
+       * Returns result of modulo 97 applied to the String input rawValue.
+       *
+       * Requirements:
+       * - rawValue must be not `Null`
+       * - rawValue must be of type `String`
+       * - rawValue must respect format `^[0-9A-Z]{1,}$`
+       *
+       * @param {*} rawValue
+       */
+      computeWithoutCheck: function (rawValue) {
+          return mod97(rawValue);
+      }
+  };
+
+  var iso7064_1 = iso7064;
+
+  function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function (obj) {
+        return typeof obj;
+      };
+    } else {
+      _typeof = function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      };
+    }
+
+    return _typeof(obj);
+  }
+
+  function createCommonjsModule(fn, module) {
+  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+
+  var clone_1 = createCommonjsModule(function (module) {
+    var clone = function () {
+      /**
+       * Clones (copies) an Object using deep copying.
+       *
+       * This function supports circular references by default, but if you are certain
+       * there are no circular references in your object, you can save some CPU time
+       * by calling clone(obj, false).
+       *
+       * Caution: if `circular` is false and `parent` contains circular references,
+       * your program may enter an infinite loop and crash.
+       *
+       * @param `parent` - the object to be cloned
+       * @param `circular` - set to true if the object to be cloned may contain
+       *    circular references. (optional - true by default)
+       * @param `depth` - set to a number if the object is only to be cloned to
+       *    a particular depth. (optional - defaults to Infinity)
+       * @param `prototype` - sets the prototype to be used when cloning an object.
+       *    (optional - defaults to parent prototype).
+      */
+
+      function clone(parent, circular, depth, prototype) {
+        var filter;
+
+        if (_typeof(circular) === 'object') {
+          depth = circular.depth;
+          prototype = circular.prototype;
+          filter = circular.filter;
+          circular = circular.circular;
+        } // maintain two arrays for circular references, where corresponding parents
+        // and children have the same index
+
+
+        var allParents = [];
+        var allChildren = [];
+        var useBuffer = typeof Buffer != 'undefined';
+        if (typeof circular == 'undefined') { circular = true; }
+        if (typeof depth == 'undefined') { depth = Infinity; } // recurse this function so we don't reset allParents and allChildren
+
+        function _clone(parent, depth) {
+          // cloning null always returns null
+          if (parent === null) { return null; }
+          if (depth == 0) { return parent; }
+          var child;
+          var proto;
+
+          if (_typeof(parent) != 'object') {
+            return parent;
+          }
+
+          if (clone.__isArray(parent)) {
+            child = [];
+          } else if (clone.__isRegExp(parent)) {
+            child = new RegExp(parent.source, __getRegExpFlags(parent));
+            if (parent.lastIndex) { child.lastIndex = parent.lastIndex; }
+          } else if (clone.__isDate(parent)) {
+            child = new Date(parent.getTime());
+          } else if (useBuffer && Buffer.isBuffer(parent)) {
+            if (Buffer.allocUnsafe) {
+              // Node.js >= 4.5.0
+              child = Buffer.allocUnsafe(parent.length);
+            } else {
+              // Older Node.js versions
+              child = new Buffer(parent.length);
+            }
+
+            parent.copy(child);
+            return child;
+          } else {
+            if (typeof prototype == 'undefined') {
+              proto = Object.getPrototypeOf(parent);
+              child = Object.create(proto);
+            } else {
+              child = Object.create(prototype);
+              proto = prototype;
+            }
+          }
+
+          if (circular) {
+            var index = allParents.indexOf(parent);
+
+            if (index != -1) {
+              return allChildren[index];
+            }
+
+            allParents.push(parent);
+            allChildren.push(child);
+          }
+
+          for (var i in parent) {
+            var attrs;
+
+            if (proto) {
+              attrs = Object.getOwnPropertyDescriptor(proto, i);
+            }
+
+            if (attrs && attrs.set == null) {
+              continue;
+            }
+
+            child[i] = _clone(parent[i], depth - 1);
+          }
+
+          return child;
+        }
+
+        return _clone(parent, depth);
+      }
+      /**
+       * Simple flat clone using prototype, accepts only objects, usefull for property
+       * override on FLAT configuration object (no nested props).
+       *
+       * USE WITH CAUTION! This may not behave as you wish if you do not know how this
+       * works.
+       */
+
+
+      clone.clonePrototype = function clonePrototype(parent) {
+        if (parent === null) { return null; }
+
+        var c = function c() {};
+
+        c.prototype = parent;
+        return new c();
+      }; // private utility functions
+
+
+      function __objToStr(o) {
+        return Object.prototype.toString.call(o);
+      }
+      clone.__objToStr = __objToStr;
+
+      function __isDate(o) {
+        return _typeof(o) === 'object' && __objToStr(o) === '[object Date]';
+      }
+      clone.__isDate = __isDate;
+
+      function __isArray(o) {
+        return _typeof(o) === 'object' && __objToStr(o) === '[object Array]';
+      }
+      clone.__isArray = __isArray;
+
+      function __isRegExp(o) {
+        return _typeof(o) === 'object' && __objToStr(o) === '[object RegExp]';
+      }
+      clone.__isRegExp = __isRegExp;
+
+      function __getRegExpFlags(re) {
+        var flags = '';
+        if (re.global) { flags += 'g'; }
+        if (re.ignoreCase) { flags += 'i'; }
+        if (re.multiline) { flags += 'm'; }
+        return flags;
+      }
+      clone.__getRegExpFlags = __getRegExpFlags;
+      return clone;
+    }();
+
+    if (module.exports) {
+      module.exports = clone;
+    }
+  });
+
+  var defaults = function defaults(options, _defaults) {
+    options = options || {};
+    Object.keys(_defaults).forEach(function (key) {
+      if (typeof options[key] === 'undefined') {
+        options[key] = clone_1(_defaults[key]);
+      }
+    });
+    return options;
+  };
+
+  var combining = [[0x0300, 0x036F], [0x0483, 0x0486], [0x0488, 0x0489], [0x0591, 0x05BD], [0x05BF, 0x05BF], [0x05C1, 0x05C2], [0x05C4, 0x05C5], [0x05C7, 0x05C7], [0x0600, 0x0603], [0x0610, 0x0615], [0x064B, 0x065E], [0x0670, 0x0670], [0x06D6, 0x06E4], [0x06E7, 0x06E8], [0x06EA, 0x06ED], [0x070F, 0x070F], [0x0711, 0x0711], [0x0730, 0x074A], [0x07A6, 0x07B0], [0x07EB, 0x07F3], [0x0901, 0x0902], [0x093C, 0x093C], [0x0941, 0x0948], [0x094D, 0x094D], [0x0951, 0x0954], [0x0962, 0x0963], [0x0981, 0x0981], [0x09BC, 0x09BC], [0x09C1, 0x09C4], [0x09CD, 0x09CD], [0x09E2, 0x09E3], [0x0A01, 0x0A02], [0x0A3C, 0x0A3C], [0x0A41, 0x0A42], [0x0A47, 0x0A48], [0x0A4B, 0x0A4D], [0x0A70, 0x0A71], [0x0A81, 0x0A82], [0x0ABC, 0x0ABC], [0x0AC1, 0x0AC5], [0x0AC7, 0x0AC8], [0x0ACD, 0x0ACD], [0x0AE2, 0x0AE3], [0x0B01, 0x0B01], [0x0B3C, 0x0B3C], [0x0B3F, 0x0B3F], [0x0B41, 0x0B43], [0x0B4D, 0x0B4D], [0x0B56, 0x0B56], [0x0B82, 0x0B82], [0x0BC0, 0x0BC0], [0x0BCD, 0x0BCD], [0x0C3E, 0x0C40], [0x0C46, 0x0C48], [0x0C4A, 0x0C4D], [0x0C55, 0x0C56], [0x0CBC, 0x0CBC], [0x0CBF, 0x0CBF], [0x0CC6, 0x0CC6], [0x0CCC, 0x0CCD], [0x0CE2, 0x0CE3], [0x0D41, 0x0D43], [0x0D4D, 0x0D4D], [0x0DCA, 0x0DCA], [0x0DD2, 0x0DD4], [0x0DD6, 0x0DD6], [0x0E31, 0x0E31], [0x0E34, 0x0E3A], [0x0E47, 0x0E4E], [0x0EB1, 0x0EB1], [0x0EB4, 0x0EB9], [0x0EBB, 0x0EBC], [0x0EC8, 0x0ECD], [0x0F18, 0x0F19], [0x0F35, 0x0F35], [0x0F37, 0x0F37], [0x0F39, 0x0F39], [0x0F71, 0x0F7E], [0x0F80, 0x0F84], [0x0F86, 0x0F87], [0x0F90, 0x0F97], [0x0F99, 0x0FBC], [0x0FC6, 0x0FC6], [0x102D, 0x1030], [0x1032, 0x1032], [0x1036, 0x1037], [0x1039, 0x1039], [0x1058, 0x1059], [0x1160, 0x11FF], [0x135F, 0x135F], [0x1712, 0x1714], [0x1732, 0x1734], [0x1752, 0x1753], [0x1772, 0x1773], [0x17B4, 0x17B5], [0x17B7, 0x17BD], [0x17C6, 0x17C6], [0x17C9, 0x17D3], [0x17DD, 0x17DD], [0x180B, 0x180D], [0x18A9, 0x18A9], [0x1920, 0x1922], [0x1927, 0x1928], [0x1932, 0x1932], [0x1939, 0x193B], [0x1A17, 0x1A18], [0x1B00, 0x1B03], [0x1B34, 0x1B34], [0x1B36, 0x1B3A], [0x1B3C, 0x1B3C], [0x1B42, 0x1B42], [0x1B6B, 0x1B73], [0x1DC0, 0x1DCA], [0x1DFE, 0x1DFF], [0x200B, 0x200F], [0x202A, 0x202E], [0x2060, 0x2063], [0x206A, 0x206F], [0x20D0, 0x20EF], [0x302A, 0x302F], [0x3099, 0x309A], [0xA806, 0xA806], [0xA80B, 0xA80B], [0xA825, 0xA826], [0xFB1E, 0xFB1E], [0xFE00, 0xFE0F], [0xFE20, 0xFE23], [0xFEFF, 0xFEFF], [0xFFF9, 0xFFFB], [0x10A01, 0x10A03], [0x10A05, 0x10A06], [0x10A0C, 0x10A0F], [0x10A38, 0x10A3A], [0x10A3F, 0x10A3F], [0x1D167, 0x1D169], [0x1D173, 0x1D182], [0x1D185, 0x1D18B], [0x1D1AA, 0x1D1AD], [0x1D242, 0x1D244], [0xE0001, 0xE0001], [0xE0020, 0xE007F], [0xE0100, 0xE01EF]];
+
+  var DEFAULTS = {
+    nul: 0,
+    control: 0
+  };
+
+  var config = function config(opts) {
+    opts = defaults(opts || {}, DEFAULTS);
+    return function wcwidth(str) {
+      return wcswidth(str, opts);
+    };
+  };
+  /*
+   *  The following functions define the column width of an ISO 10646
+   *  character as follows:
+   *  - The null character (U+0000) has a column width of 0.
+   *  - Other C0/C1 control characters and DEL will lead to a return value
+   *    of -1.
+   *  - Non-spacing and enclosing combining characters (general category
+   *    code Mn or Me in the
+   *    Unicode database) have a column width of 0.
+   *  - SOFT HYPHEN (U+00AD) has a column width of 1.
+   *  - Other format characters (general category code Cf in the Unicode
+   *    database) and ZERO WIDTH
+   *    SPACE (U+200B) have a column width of 0.
+   *  - Hangul Jamo medial vowels and final consonants (U+1160-U+11FF)
+   *    have a column width of 0.
+   *  - Spacing characters in the East Asian Wide (W) or East Asian
+   *    Full-width (F) category as
+   *    defined in Unicode Technical Report #11 have a column width of 2.
+   *  - All remaining characters (including all printable ISO 8859-1 and
+   *    WGL4 characters, Unicode control characters, etc.) have a column
+   *    width of 1.
+   *  This implementation assumes that characters are encoded in ISO 10646.
+  */
+
+
+  function wcswidth(str, opts) {
+    if (typeof str !== 'string') { return wcwidth(str, opts); }
+    var s = 0;
+
+    for (var i = 0; i < str.length; i++) {
+      var n = wcwidth(str.charCodeAt(i), opts);
+      if (n < 0) { return -1; }
+      s += n;
+    }
+
+    return s;
+  }
+
+  function wcwidth(ucs, opts) {
+    // test for 8-bit control characters
+    if (ucs === 0) { return opts.nul; }
+    if (ucs < 32 || ucs >= 0x7f && ucs < 0xa0) { return opts.control; } // binary search in table of non-spacing characters
+
+    if (bisearch(ucs)) { return 0; } // if we arrive here, ucs is not a combining or C0/C1 control character
+
+    return 1 + (ucs >= 0x1100 && (ucs <= 0x115f || // Hangul Jamo init. consonants
+    ucs == 0x2329 || ucs == 0x232a || ucs >= 0x2e80 && ucs <= 0xa4cf && ucs != 0x303f || // CJK ... Yi
+    ucs >= 0xac00 && ucs <= 0xd7a3 || // Hangul Syllables
+    ucs >= 0xf900 && ucs <= 0xfaff || // CJK Compatibility Ideographs
+    ucs >= 0xfe10 && ucs <= 0xfe19 || // Vertical forms
+    ucs >= 0xfe30 && ucs <= 0xfe6f || // CJK Compatibility Forms
+    ucs >= 0xff00 && ucs <= 0xff60 || // Fullwidth Forms
+    ucs >= 0xffe0 && ucs <= 0xffe6 || ucs >= 0x20000 && ucs <= 0x2fffd || ucs >= 0x30000 && ucs <= 0x3fffd));
+  }
+
+  function bisearch(ucs) {
+    var min = 0;
+    var max = combining.length - 1;
+    var mid;
+    if (ucs < combining[0][0] || ucs > combining[max][1]) { return false; }
+
+    while (max >= min) {
+      mid = Math.floor((min + max) / 2);
+      if (ucs > combining[mid][1]) { min = mid + 1; }else if (ucs < combining[mid][0]) { max = mid - 1; }else { return true; }
+    }
+
+    return false;
+  }
+
+  // Generated by CoffeeScript 2.4.1
+  var _pad;
+
+  _pad = function pad(text, length, options) {
+    var escapecolor, invert, padlength, textnocolors;
+
+    if (options == null) {
+      options = {};
+    }
+
+    invert = typeof text === 'number';
+
+    if (invert) {
+      var _ref = [text, length];
+      length = _ref[0];
+      text = _ref[1];
+    }
+
+    if (typeof options === 'string') {
+      options = {
+        "char": options
+      };
+    }
+
+    if (options["char"] == null) {
+      options["char"] = ' ';
+    }
+
+    if (options.strip == null) {
+      options.strip = false;
+    }
+
+    if (typeof text !== 'string') {
+      text = text.toString();
+    }
+
+    textnocolors = null;
+    _pad = '';
+
+    if (options.colors) {
+      escapecolor = /\x1B\[(?:[0-9]{1,2}(?:;[0-9]{1,2})?)?[m|K]/g;
+      textnocolors = text.replace(escapecolor, '');
+    }
+
+    padlength = options.fixed_width ? length - (textnocolors || text).length : length - config(options.wcwidth_options)(textnocolors || text);
+
+    if (padlength < 0) {
+      if (options.strip) {
+        if (invert) {
+          return text.substr(length * -1);
+        } else {
+          return text.substr(0, length);
+        }
+      }
+
+      return text;
+    }
+
+    _pad += options["char"].repeat(padlength);
+
+    if (invert) {
+      return _pad + text;
+    } else {
+      return text + _pad;
+    }
+  };
+
+  var _pad$1 = _pad;
+
+  var SIZES = [7, 2, 4, 1, 2, 4];
+  var NOT_NUMBERS = /[^0-9]/g;
+
+  var ValidateCNJ = function ValidateCNJ() {
+    var parameters = [], len = arguments.length;
+    while ( len-- ) parameters[ len ] = arguments[ len ];
+
+    var args = parameters.map(function (v, i) {
+      var r = v;
+      if (typeof r === 'number') { r = r.toString(); }
+      if (r === null && i === 1) { return r; }
+      if (typeof r !== 'string') { throw new ValidateCNJException('Could not validate the CNJ number, wrong parameter type'); }
+      if (!SIZES[i]) { throw new ValidateCNJException('Could not validate the CNJ number, wrong parameters size'); }
+      return _pad$1(SIZES[i], r, '0');
+    });
+
+    var proc = args[0];
+    var dv = args[1];
+    var year = args[2];
+    var justice = args[3];
+    var number = args[4];
+    var court = args[5];
+
+    var firstStep = iso7064_1.compute(proc).toString();
+    var secondStep = iso7064_1.compute(firstStep + year + justice + number).toString();
+    var thirdStep = iso7064_1.compute(((secondStep + court) + "00")).toString();
+
+    var ndv = 98 - (thirdStep % 97);
+    this.dv = _pad$1(2, ndv.toString(), '0');
+
+    if (dv !== null && dv !== this.dv) {
+      throw new ValidateCNJException('Could not validate the CNJ number, invalid checker digit');
+    }
+
+    this.proc = proc;
+    this.year = year;
+    this.justice = justice;
+    this.number = number;
+    this.court = court;
+  };
+
+  var prototypeAccessors = { pieces: { configurable: true } };
+
+  ValidateCNJ.factory = function factory (proc, ref, year) {
+      var justice = ref.justice;
+      var number = ref.number;
+      var court = ref.court;
+
+    return new ValidateCNJ(proc, null, year, justice, number, court);
+  };
+
+  prototypeAccessors.pieces.get = function () {
+    return {
+      proc: this.proc,
+      year: this.year,
+      justice: this.justice,
+      number: this.number,
+      court: this.court,
+    };
+  };
+
+  ValidateCNJ.load = function load (cnj) {
+    var numcnj = cnj.replace(NOT_NUMBERS, '');
+    var pos = 0;
+    return new (Function.prototype.bind.apply( ValidateCNJ, [ null ].concat( SIZES.map(function (i) {
+      var substr = numcnj.substr(pos, i);
+      pos += i;
+      return substr;
+    })) ));
+  };
+
+  ValidateCNJ.prototype.generate = function generate (mask) {
+      if ( mask === void 0 ) mask = true;
+
+    return !mask
+      ? this.proc + this.dv + this.year + this.justice + this.number + this.court
+      : [this.proc, [this.dv, this.year, this.justice, this.number, this.court].join('.')].join('-');
+  };
+
+  Object.defineProperties( ValidateCNJ.prototype, prototypeAccessors );
+
+  exports.Exception = ValidateCNJException;
+  exports.Validate = ValidateCNJ;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
