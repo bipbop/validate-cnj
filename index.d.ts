@@ -16,6 +16,7 @@ export class Validate {
 
     public readonly proc: string;
     public readonly year: string;
+    public readonly dv: string;
     public readonly justice: string;
     public readonly number: string;
     public readonly court: string;

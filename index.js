@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = global || self, factory(global.JuristekParser = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ValidateCNJ = {}));
 }(this, (function (exports) { 'use strict';
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -201,12 +201,11 @@
       */
 
       function clone(parent, circular, depth, prototype) {
-        var filter;
 
         if (_typeof(circular) === 'object') {
           depth = circular.depth;
           prototype = circular.prototype;
-          filter = circular.filter;
+          circular.filter;
           circular = circular.circular;
         } // maintain two arrays for circular references, where corresponding parents
         // and children have the same index
@@ -567,8 +566,8 @@
   Validate.format = function format (cnj) {
     try {
       return new Validate(cnj).generate();
-    } catch (cnj) {
-      return cnj;
+    } catch (cnj$1) {
+      return cnj$1;
     }
   };
 

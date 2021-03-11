@@ -2,7 +2,6 @@
   "author": {
     "name": "lf.amorim@bipbop.com.br"
   },
-  "dependencies": {},
   "types": "index.d.ts",
   "files": [
     "index.d.ts",
@@ -11,20 +10,20 @@
   "deprecated": false,
   "description": "Validador da numeração CNJ escrito em JavaScript com suporte para navegadores, pegar e usar.",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "chai": "^4.3.3",
     "es6-error": "^4.1.1",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-airbnb-es5": "^1.2.0",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import": "^2.22.1",
     "iso-7064": "^1.0.2",
-    "mocha": "^7.1.1",
+    "mocha": "^8.3.1",
     "pad": "^3.2.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.3.0",
-    "@rollup/plugin-buble": "^0.21.1",
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1"
+    "rollup": "^2.41.1"
   },
   "keywords": [
     "cnj",
